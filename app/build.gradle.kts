@@ -39,10 +39,14 @@ android {
     buildFeatures {
         compose = true
     }
+    hilt {
+        enableAggregatingTask = false
+    }
 }
 
 dependencies {
 
+    implementation(libs.javapoet)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -57,11 +61,13 @@ dependencies {
 
     // Room
     implementation(libs.roomRuntime)
+    implementation(libs.roomKTX)
     ksp(libs.roomCompiler)
 
     // Hilt
     implementation(libs.hiltAndroid)
     ksp(libs.hiltCompiler)
+    implementation(libs.hiltNavigationCompose)
 
     // Coroutines
     implementation(libs.coroutinesCore)

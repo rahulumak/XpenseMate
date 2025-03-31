@@ -1,5 +1,6 @@
 [versions]
 agp = "8.9.1"
+javapoet = "1.13.0"
 kotlin = "2.1.10"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -12,9 +13,11 @@ coroutines = "1.10.1"
 hilt = "2.53.1"
 room = "2.6.1"
 ksp ="2.1.10-1.0.30"
+navigationCompose = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -37,10 +40,12 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 # Hilt
 hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "navigationCompose" }
 
 # Room Database
 roomRuntime = { module = "androidx.room:room-runtime", version.ref = "room" }
 roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+roomKTX = { module = "androidx.room:room-ktx", version.ref = "room" }
 
 # Coroutines
 coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
