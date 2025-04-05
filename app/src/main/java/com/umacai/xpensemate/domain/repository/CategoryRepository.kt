@@ -9,4 +9,6 @@ interface CategoryRepository {
     suspend fun getAllCategories(): List<CategoryEntity>
 
     suspend fun deleteCategory(categoryId: Int)
+
+    suspend fun getCategoryIdFromSMSText(smsText: String): Int?
 }

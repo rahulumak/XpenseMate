@@ -28,5 +28,6 @@ data class TransactionEntity(
     val amount: Double,
     val date: Date,
     val categoryId: Int,
-    val paymentMethodId: Int
+    val paymentMethodId: Int,
+    val isExpense: Boolean = true
 )

@@ -14,4 +14,7 @@ interface PaymentMethodDao {
 
     @Query("DELETE FROM payment_methods WHERE id = :paymentMethodId")
     suspend fun deletePaymentMethod(paymentMethodId: Int)
+
+    @Query("SELECT * FROM payment_methods WHERE name IN (:smsText)")
+    suspend fun getPaymentMethodIdFromSMSText(smsText: String): PaymentMethodEntity?
 }

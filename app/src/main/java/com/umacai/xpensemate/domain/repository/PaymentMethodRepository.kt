@@ -9,4 +9,6 @@ interface PaymentMethodRepository {
     suspend fun getAllPaymentMethods(): List<PaymentMethodEntity>
 
     suspend fun deletePaymentMethod(paymentMethodId: Int)
+
+    suspend fun getPaymentMethodIdFromSMSText(smsText: String): Int?
 }

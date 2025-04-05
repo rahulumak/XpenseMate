@@ -20,4 +20,10 @@ class CategoryRepositoryImpl @Inject constructor(
     override suspend fun deleteCategory(categoryId: Int) {
         categoryDao.deleteCategory(categoryId)
     }
+
+    override suspend fun getCategoryIdFromSMSText(smsText: String): Int? {
+        val category = categoryDao.getCategoryIdFromSMSText(smsText)
+        return category?.id
+
+    }
 }

@@ -14,4 +14,7 @@ interface CategoryDao {
 
     @Query("DELETE FROM categories WHERE id = :categoryId")
     suspend fun deleteCategory(categoryId: Int)
+
+    @Query("SELECT * FROM categories WHERE name IN (:smsText)")
+    suspend fun getCategoryIdFromSMSText(smsText: String): CategoryEntity?
 }

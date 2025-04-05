@@ -20,4 +20,10 @@ class PaymentMethodRepositoryImpl @Inject constructor(
     override suspend fun deletePaymentMethod(paymentMethodId: Int) {
         paymentMethodDao.deletePaymentMethod(paymentMethodId)
     }
+
+    override suspend fun getPaymentMethodIdFromSMSText(smsText: String): Int? {
+        val paymentMethod = paymentMethodDao.getPaymentMethodIdFromSMSText(smsText)
+        return paymentMethod?.id
+
+    }
 }
