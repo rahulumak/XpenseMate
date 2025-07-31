@@ -73,6 +73,8 @@ dependencies {
     implementation(libs.coroutinesCore)
     implementation(libs.coroutinesAndroid)
 
+    implementation(libs.androidx.material.icons.extended)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

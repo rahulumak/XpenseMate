@@ -18,7 +18,7 @@ import java.util.*
 import com.umacai.xpensemate.presentation.viewmodel.TransactionViewModel
 
 @Composable
-fun TransactionScreen(viewModel: TransactionViewModel = hiltViewModel()) {
+fun TransactionScreen(viewModel: TransactionViewModel = hiltViewModel<TransactionViewModel>()) {
 
 
     val transactions by viewModel.transactions.collectAsState()
